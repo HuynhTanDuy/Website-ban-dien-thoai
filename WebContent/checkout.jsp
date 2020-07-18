@@ -2,6 +2,7 @@
 <%@page import="java.util.TreeMap"%>
 <%@page import="java.util.Map"%>
 <%@page import="uit.model.*"%>
+<%@page import="uit.dao.AccountDAOImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -30,7 +31,7 @@
 
 	<%
 		if (session.getAttribute("usernamex") == null) {
-			response.sendRedirect("/SOF301_Assignment/account.jsp");
+			response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
 		} else {
 			Cart cart = (Cart) session.getAttribute("cart");
 			if (cart == null) {
@@ -63,7 +64,8 @@
 			if (request.getAttribute("Payment_Methods") != null) {
 				Payment_Methods = (String) request.getAttribute("Payment_Methods");
 			}
-			
+			AccountDAOImpl account = new AccountDAOImpl();
+			Account user  = account.getAccount((String) session.getAttribute("usernamex"));
 	%>
 	<jsp:include page="header.jsp"></jsp:include>
 
@@ -155,17 +157,21 @@
 						
 							<p>Địa Chỉ Giao Hàng</p>
 							<span style="color: red;"><%=error_address%></span>
-							<input name="Shipping_Address" value="<%=Shipping_Address%>"></input>
+							<input name="Shipping_Address" value="<%=user.getAddress() %>"></input>
 							
-							<p>Địa Chỉ Email</p>
+							<p>Số điện thoại</p>
 							<span style="color: red;"><%=error_email%></span>
-							<input type="email" name="Email" value="<%=Email%>"></input>
+							<input name="SDT" value="<%=user.getSDT() %>"></input>
+							
+							<p>Email</p>
+							<span style="color: red;"><%=error_email%></span>
+							<input type="email" name="Email" value="<%=user.getEmail() %>"></input>
 							
 							<p>Phương Thức Thanh Toán</p>
 							<span style="color: red;"><%=error_methods%></span> <select
 								name="Payment_Methods">
 								<option value="">Chọn</option>
-								<option value="Thanh toan khi giao hang">Thanh toán khi giao hàng</option>
+								<option value="Thanh toan khi giao hang" selected>Thanh toán khi giao hàng</option>
 								<option value="Thanh toan qua the ngan hang">Thanh toán qua thẻ ngân hàng</option>
 								<option value="Chuyen khoan ngan hang">Chuyển khoản ngân hàng</option>
 							</select>

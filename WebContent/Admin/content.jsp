@@ -5,15 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin HTT-Mobile</title>
+    <title>Admin Q-Mobile</title>
 	<!-- BOOTSTRAP STYLES-->
-    <link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css"rel="stylesheet" />
+    <link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css"rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css" rel="stylesheet" />
      <!-- MORRIS CHART STYLES-->
-    <link href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="/SOF301_Assignment/Admin/assets/css/custom.css" rel="stylesheet" />
+    <link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -22,7 +22,7 @@
 		<div id="page-inner">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Trang Chủ Admin HTT-Mobile</h2>
+					<h2>Trang Chủ Admin Q-Mobile</h2>
 				</div>
 			</div>
 			<!-- /. ROW  -->

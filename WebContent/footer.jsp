@@ -27,7 +27,7 @@
 						<h2>
 							<span>HTT</span>-MOBILE
 						</h2>
-						<p>Là cửa hàng uy tín nhất Hà Nội. Chuyên cung cấp hàng chất
+						<p>Là cửa hàng uy tín nhất tại Hồ Chí Minh. Chuyên cung cấp hàng chất
 							lượng cao nhất VN</p>
 					</div>
 				</div>
@@ -42,8 +42,8 @@
 									<i class="fa fa-play-circle-o"></i>
 								</div>
 							</a>
-							<p>Đỗ Trung Hiếu</p>
-							<h2>PH04388</h2>
+							<p>Huỳnh Tấn Duy</p>
+							<h2>16520287</h2>
 						</div>
 					</div>
 
@@ -57,8 +57,8 @@
 									<i class="fa fa-play-circle-o"></i>
 								</div>
 							</a>
-							<p>Nguyễn Thị Trang</p>
-							<h2>PH04494</h2>
+							<p>Huỳnh Phương Duy</p>
+							<h2>16520285</h2>
 						</div>
 					</div>
 
@@ -72,8 +72,8 @@
 									<i class="fa fa-play-circle-o"></i>
 								</div>
 							</a>
-							<p>Chi Thị Hà Thu</p>
-							<h2>PH04293</h2>
+							<p>Nguyễn Văn Vinh</p>
+							<h2>16521444</h2>
 						</div>
 					</div>
 
@@ -90,7 +90,7 @@
 				<div class="col-sm-3">
 					<div class="address">
 						<img src="images/home/map.png" alt="" />
-						<p>Ngách 58/23 Trần Bình, Mai Dịch, Cầu Giấy, Hà Nội (100.000)</p>
+						<p>Đại học Công nghệ Thông tin - Đại học Quốc gia TP Hồ Chí Minh</p>
 					</div>
 				</div>
 			</div>
@@ -145,7 +145,7 @@
 				</div>
 				<div class="col-sm-3 col-sm-offset-1">
 					<div class="single-widget">
-						<h2>GIỚI THIỆU VỀ HTT-MOBILE</h2>
+						<h2>GIỚI THIỆU VỀ MOBILE-STORE</h2>
 						<form action="#" class="searchform">
 							<input type="text" placeholder="Địa chỉ email của bạn" />
 							<button type="submit" class="btn btn-default">
@@ -161,19 +161,7 @@
 		</div>
 	</div>
 
-	<div class="footer-bottom">
-		<div class="container">
-			<div class="row">
-				<p class="pull-left">Copyright © 2017 HTT-MOBILE Inc. All rights
-					reserved.</p>
-				<p class="pull-right">
-					Designed by <span><a target="_blank"
-						href="https://www.youtube.com/channel/UCBEXqRE1__XX7NhtF5YqHPQ?sub_confirmation=1">Hiếu
-							Boy</a></span>
-				</p>
-			</div>
-		</div>
-	</div>
+	
 	
 	<script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",72082]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
 	

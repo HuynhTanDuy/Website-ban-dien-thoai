@@ -67,8 +67,8 @@
 			</div>
 
 
-			<div class="brands_products">
-				<!--brands_products-->
+			<!-- <div class="brands_products">
+				brands_products
 				<h2>NHÃN HIỆU</h2>
 				<div class="brands-name">
 					<ul class="nav nav-pills nav-stacked">
@@ -77,11 +77,11 @@
 
 					</ul>
 				</div>
-			</div>
+			</div> -->
 			<!--/brands_products-->
 
-			<div class="price-range">
-				<!--price-range-->
+			<!-- <div class="price-range">
+				price-range
 				<h2>Khoảng Giá</h2>
 				<div class="well text-center">
 					<input type="text" class="span2" value="" data-slider-min="0"
@@ -89,15 +89,15 @@
 						data-slider-value="[0,40000]" id="sl2"><br /> <b
 						class="pull-left">0 VNĐ</b> <b class="pull-right">40 Triệu VNĐ</b>
 				</div>
-			</div>
+			</div> -->
 			<!--/price-range-->
 
-			<div class="shipping text-center">
-				<!--shipping-->
+			<!-- <div class="shipping text-center">
+				shipping
 				<img src="images/home/giamgia.jpg" alt="" />
 				
 			</div>
-			<!--/shipping-->
+			/shipping -->
 			
 		</div>
 		<div style="clear: both;"></div>

@@ -54,11 +54,12 @@ public class AccountServlet_Update extends HttpServlet {
 		// Validate Email
 		if (Email.equals("")) {
 			email_error = "Vui lòng nhập Email của bạn !";
-		} else {
-			if (accDAO.checkEmail(Email) == true) {
-				email_error = "Email này đã được đăng ký, vui lòng ch�?n Email khác !";
-			}
-		}
+		} 
+//		else {
+//			if (accDAO.checkEmail(Email) == true) {
+//				email_error = "Email này đã được đăng ký, vui lòng ch�?n Email khác !";
+//			}
+//		}
 		if (email_error.length() > 0) {
 			request.setAttribute("email_error", email_error);
 		}

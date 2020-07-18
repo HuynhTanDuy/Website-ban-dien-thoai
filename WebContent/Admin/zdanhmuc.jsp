@@ -26,7 +26,7 @@
 			<div id="page-inner">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Quản Lý Danh Mục</h2>
+						<h2>Sửa Danh Mục</h2>
 					</div>
 				</div>
 
@@ -39,24 +39,24 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-6">
-										<form role="form" action="" method="">
+										<form role="form" action="/Website-ban-dien-thoai/CategoryServlet_Update" method="POST">
 											<div class="form-group">
-												<label>Mã Danh Mục</label> <input class="form-control"
-													placeholder="VD: IP" type="text" />
+												<!-- <label>Mã Danh Mục</label>  --><input class="form-control" name="ID_Category"
+													placeholder="VD: IP" type="hidden" value=<%=request.getParameter("ID_Category")%> />
 											</div>
 											<div class="form-group">
-												<label>Tên Danh Mục</label> <input class="form-control"
-													placeholder="VD: IPhone" type="text" />
+												<label>Tên Danh Mục</label> <input class="form-control" name="Name"
+													placeholder="VD: IPhone" type="text" value="<%=request.getParameter("Name_Category")%>" />
 											</div>
-											<div class="form-group">
+											<%-- <div class="form-group">
 												<label>Danh Mục Cha</label> <input class="form-control"
-													placeholder="VD: Null" type="text" />
-											</div>
-
-											<button type="submit" class="btn btn-success">Thêm</button>
-											<button type="submit" class="btn btn-danger">Sửa</button>
-											<button type="reset" class="btn btn-primary">Reset
-												Button</button>
+													placeholder="VD: Null" type="text" value=<%=request.getParameter("ID_Category")%>/>
+											</div> --%>
+											<input type="hidden" name="action" value="Update">
+											
+											<button type="submit" class="btn btn-danger">Cập nhật</button>
+											<!-- <button type="reset" class="btn btn-primary">Reset
+												Button</button> -->
 
 										</form>
 										<br />

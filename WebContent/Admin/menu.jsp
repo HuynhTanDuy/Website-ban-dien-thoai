@@ -7,13 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Admin HTT-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css" " rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css" " rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css" rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css" rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
@@ -26,13 +26,13 @@
 				class="user-image img-responsive" /></li>
 
 
-			<li><a class="active-menu" href="/SOF301_Assignment/Admin/account_manager.jsp"><i
+			<li><a class="" href="/Website-ban-dien-thoai/Admin/account_manager.jsp"><i
 					class="fa fa-dashboard fa-3x"></i> Quản lý tài khoản</a></li>
-			<li><a href="/SOF301_Assignment/Admin/qlydanhmuc.jsp"><i class="fa fa-qrcode fa-3x"></i>
+			<li><a href="/Website-ban-dien-thoai/Admin/qlydanhmuc.jsp"><i class="fa fa-qrcode fa-3x"></i>
 					Quản lý danh mục</a></li>
-			<li><a href="/SOF301_Assignment/Admin/qlysanpham.jsp"><i
+			<li><a href="/Website-ban-dien-thoai/Admin/qlysanpham.jsp"><i
 					class="fa fa-bar-chart-o fa-3x"></i> Quản lý sản phẩm</a></li>
-			<li><a href="/SOF301_Assignment/Admin/invoice_manager.jsp"><i
+			<li><a href="/Website-ban-dien-thoai/Admin/invoice_manager.jsp"><i
 					class="fa fa-edit fa-3x"></i> Quản lý hóa đơn</a></li>
 
 

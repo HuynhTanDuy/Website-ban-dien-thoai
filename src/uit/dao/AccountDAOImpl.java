@@ -145,6 +145,9 @@ public class AccountDAOImpl implements AccountDAO {
 			while (rs.next()) {
 				Account acc = new Account();
 				acc.setID_Account(rs.getString("ID_Account"));
+				acc.setEmail(rs.getString("Email"));
+				acc.setSDT(rs.getString("SDT"));
+				acc.setAddress(rs.getString("Address"));
 				return acc;
 			}
 		} catch (SQLException e) {

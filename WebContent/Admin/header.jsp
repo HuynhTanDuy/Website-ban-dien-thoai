@@ -7,13 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Admin HTT-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css" rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css" rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
@@ -29,12 +29,12 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/SOF301_Assignment/Admin/index.jsp">HTT-Mobile</a>
+			<a class="navbar-brand" href="/Website-ban-dien-thoai/Admin/index.jsp">HTT-Mobile</a>
 		</div>
 		<div
 			style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
 			<a class="btn btn-danger square-btn-adjust"><%=session.getAttribute("usernamex")%></a>
-			<a href="/SOF301_Assignment/LoginServlet?enter=logout" class="btn btn-danger square-btn-adjust">Đăng Xuất</a>
+			<a href="/Website-ban-dien-thoai/LoginServlet?enter=logout" class="btn btn-danger square-btn-adjust">Đăng Xuất</a>
 			
 		</div>
 		</nav>

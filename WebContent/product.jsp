@@ -52,17 +52,28 @@
 			cart = new Cart();
 			session.setAttribute("cart", cart);
 		}
+		
+		ArrayList<Product> searchProduct = new ArrayList();
+		if (request.getParameter("ID_Category") !=null) {
+			searchProduct = sanPhamDAO.getListProductByCategory(request.getParameter("ID_Category"));
+		}
+		else {
+			searchProduct = sanPhamDAO.getListProductByName(request.getParameter("Name_Product"));
+		}
+		
+		
 	%>
 
 	<div class="col-sm-9 padding-right">
 		<div class="features_items">
 			<!--features_items-->
-			<h2 class="title text-center">Danh Sách Sản Phẩm</h2>
+			<h2 class="title text-center">Kết quả tìm kiếm</h2>
 			<%
-				for (Product sp : sanPhamDAO.getListProductByCategory(request.getParameter("ID_Category"))) {
+				for (Product sp : searchProduct) {
 			%>
 			<div class="col-sm-4">
 				<div class="product-image-wrapper">
+					<a href="detail.jsp?ID_Product=<%=sp.getID_Product()%>">
 					<div class="single-products">
 						<div class="productinfo text-center">
 							<img src="<%=sp.getImage()%>" alt="" />
@@ -75,7 +86,7 @@
 								class="btn btn-default add-to-cart"><i
 								class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 						</div>
-						<div class="product-overlay">
+						<%-- <div class="product-overlay">
 							<div class="overlay-content">
 								<h2><%=nf.format(sp.getPrice())%>
 									VNĐ
@@ -86,17 +97,18 @@
 									class="btn btn-default add-to-cart"><i
 									class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 							</div>
-						</div>
+						</div> --%>
 						<img src="images/home/new.png" class="new" alt="" />
 					</div>
-					<div class="choose">
+					</a>
+					<%-- <div class="choose">
 						<ul class="nav nav-pills nav-justified">
 							<li><a href="detail.jsp?ID_Product=<%=sp.getID_Product()%>"><i
 									class="fa fa-plus-square"></i>Xem chi tiết</a></li>
 							<li><a href="#"><i class="fa fa-plus-square"></i>Thêm
 									vào so sánh</a></li>
 						</ul>
-					</div>
+					</div> --%>
 				</div>
 			</div>
 			<%
@@ -123,6 +135,7 @@
 
 			<div class="col-sm-4">
 				<div class="product-image-wrapper">
+					<a href="detail.jsp?ID_Product=<%=sp.getID_Product()%>">
 					<div class="single-products">
 						<div class="productinfo text-center">
 							<img src="<%=sp.getImage()%>" alt="" />
@@ -135,7 +148,7 @@
 								class="btn btn-default add-to-cart"><i
 								class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 						</div>
-						<div class="product-overlay">
+						<%-- <div class="product-overlay">
 							<div class="overlay-content">
 								<h2><%=nf.format(sp.getPrice())%>
 									VNĐ
@@ -146,16 +159,17 @@
 									class="btn btn-default add-to-cart"><i
 									class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 							</div>
-						</div>
+						</div> --%>
 					</div>
-					<div class="choose">
+					</a>
+					<%-- <div class="choose">
 						<ul class="nav nav-pills nav-justified">
 							<li><a href="detail.jsp?ID_Product=<%=sp.getID_Product()%>"><i class="fa fa-plus-square"></i>Xem chi
 									tiết</a></li>
 							<li><a href=""><i class="fa fa-plus-square"></i>Thêm vào
 									so sánh</a></li>
 						</ul>
-					</div>
+					</div> --%>
 				</div>
 			</div>
 
@@ -186,8 +200,8 @@
 			</ul>
 		</div>
 
-		<div class="category-tab">
-			<!--category-tab-->
+		<!-- <div class="category-tab">
+			category-tab
 			<div class="col-sm-12">
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tshirt" data-toggle="tab">IPhone
@@ -495,7 +509,7 @@
 				</div>
 			</div>
 		</div>
-		<!--/category-tab-->
+		/category-tab -->
 
 
 
