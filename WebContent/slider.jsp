@@ -40,9 +40,9 @@
 						<div class="item active">
 							<div class="col-sm-6">
 								<h1>
-									<span>HTT</span>-MOBILE
+									<span>MOBILE</span>-STORE
 								</h1>
-								<h2>Cửa Hàng Bán Điện Thoại IPHONE</h2>
+								<h2>Cửa Hàng Bán Điện Thoại </h2>
 								<p>Sở hữu màn hình lần lượt là 4,7 inch và 5,5 inch, bộ đôi
 									iPhone 6 và 6 Plus đã trở thành chiếc iPhone màn hình lớn nhất
 									từ trước đến nay mà Apple từng sản xuất....</p>
@@ -61,7 +61,7 @@
 						<div class="item">
 							<div class="col-sm-6">
 								<h1>
-									<span>HTT</span>-MOBILE
+									<span>MOBILE</span>-STORE
 								</h1>
 								<h2>Sản Phẩm Mới 99%</h2>
 								<p>Đã ra mắt từ năm 2014 nhưng nhờ thiết kết đẹp và hiệu
@@ -82,7 +82,7 @@
 						<div class="item">
 							<div class="col-sm-6">
 								<h1>
-									<span>HTT</span>-MOBILE
+									<span>MOBILE</span>-STORE
 								</h1>
 								<h2>Vô Địch Trong Tầm Giá</h2>
 								<p>• iPhone 6 QT 16GB giá từ 4.750</p>

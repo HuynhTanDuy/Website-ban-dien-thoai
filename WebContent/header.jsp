@@ -95,16 +95,23 @@
 				<div class="col-sm-8">
 					<div class="shop-menu pull-right">
 						<ul class="nav navbar-nav">
-
-							<li><a href="LoginServlet?enter=logout"><i
+							<% if (session.getAttribute("usernamex") != null)	{	%>
+							<li><a href="#"><i
 									class="fa fa-user"></i> Tài khoản: <%=session.getAttribute("usernamex")%></a></li>
-							<li><a href="#"><i class="fa fa-star"></i> Danh Sách</a></li>
+							<% } %>
+							
 							<li><a href="checkout.jsp"><i class="fa fa-crosshairs"></i>
 									Thanh Toán</a></li>
 							<li><a href="cart.jsp"><i class="fa fa-shopping-cart"></i>
 									Giỏ Hàng</a></li>
+							<% if (session.getAttribute("usernamex") == null)	{	%>
 							<li><a href="account.jsp"><i class="fa fa-lock"></i>
 									Đăng Nhập</a></li>
+							<% } else { %>	
+							<li><a href="LoginServlet?enter=logout"><i class="fa fa-lock"></i>
+									Đăng Xuất</a></li>	
+							<% } %>		
+									
 						</ul>
 					</div>
 				</div>
@@ -158,7 +165,10 @@
 				</div>
 				<div class="col-sm-3">
 					<div class="search_box pull-right">
-						<input type="text" placeholder="Tìm Kiếm" name="txtSearch" />
+						<form action="SearchServlet" method="GET">
+							<input type="text" placeholder="Tìm Kiếm" name="search" />
+						</form>
+						
 					</div>
 				</div>
 			</div>

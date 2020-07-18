@@ -5,15 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Quản Lý Tài Khoản | Admin HTT-Mobile</title>
+<title>Quản Lý Tài Khoản | Admin Q-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css" rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css" rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
@@ -22,7 +22,7 @@
 
 	<%
 	if (session.getAttribute("usernamex") == null) {
-		response.sendRedirect("/SOF301_Assignment/account.jsp");
+		response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
 	} 
 	String password_error = "", email_error = "", fullname_error = "", phone_error = "",
 				address_error = "",access_error="",status_error="";
@@ -48,7 +48,7 @@
 			status_error = (String) request.getAttribute("status_error");
 		}
 
-		String  password = "", email = "", phone = "", fullname = "", address = "",access="", status="";
+		String  password = "123", email = "", phone = "", fullname = "", address = "",access="", status="";
 		
 		if (request.getAttribute("Password") != null) {
 			password = (String) request.getAttribute("Password");
@@ -65,7 +65,7 @@
 		if (request.getAttribute("Address") != null) {
 			address = (String) request.getAttribute("Address");
 		}
-		/* if (request.getAttribute("Access") != null) {
+		/*if (request.getAttribute("Access") != null) {
 			access = (String) request.getAttribute("Access");
 		}
 		if (request.getAttribute("Status") != null) {
@@ -94,7 +94,7 @@
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-6">
-										<form action="/SOF301_Assignment/AccountServlet_Update" method="post">
+										<form action="/Website-ban-dien-thoai/AccountServlet_Update" method="post">
 										
 											<div class="form-group">
 												<label>Mật Khẩu</label> 
@@ -130,18 +130,18 @@
 												<label>Quyền Truy Cập</label> 
 												<span style="color: red"><%=access_error%></span>
 												<select class="form-control" name="Access">
-													<option value=0>Chọn</option>
-													<option value="1">Admin</option>
-													<option value="2">Khách Hàng</option>
+													
+													<option value="1" <% if (request.getParameter("Access").equals("1") ) {%> selected <%} %> >Admin</option>
+													<option value="2" <% if (request.getParameter("Access").equals("2") ) {%> selected <%} %>>Khách Hàng</option>
 												</select>
 											</div>
 											<div class="form-group">
 												<label>Trạng Thái</label> 
 												<span style="color: red"><%=status_error %></span>
 												<select class="form-control" name="Status">
-													<option value=0>Chọn</option>
-													<option value="1">Đã Kích Hoạt</option>
-													<option value="2">Đang Chờ</option>
+													
+													<option value="1" <% if (request.getParameter("Status").equals("1") ) {%> selected <%} %>>Đã Kích Hoạt</option>
+													<option value="2" <% if (request.getParameter("Status").equals("2") ) {%> selected <%} %>>Đang Chờ</option>
 												</select>
 											</div>
 											<input type="hidden" name="action" value="Update"> 

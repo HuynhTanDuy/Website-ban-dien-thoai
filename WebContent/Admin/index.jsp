@@ -7,17 +7,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Admin HTT-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css"
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css"
 	rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css"
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css"
 	rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
 <link
-	href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css"
+	href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css"
 	rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css"
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css"
 	rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
@@ -26,7 +26,7 @@
 <body>
 	<%
 		if (session.getAttribute("usernamex") == null) {
-			response.sendRedirect("/SOF301_Assignment/account.jsp");
+			response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
 		}
 	%>
 	<div id="wrapper">

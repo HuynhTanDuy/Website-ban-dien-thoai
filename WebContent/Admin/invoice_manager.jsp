@@ -17,13 +17,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quản Lý Danh Mục | Admin HTT-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css" rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css" rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
@@ -32,7 +32,7 @@
 
 	<%
 	if (session.getAttribute("usernamex") == null) {
-		response.sendRedirect("/SOF301_Assignment/account.jsp");
+		response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
 	} 
 		InvoiceDAOImpl invoiceDAO = new InvoiceDAOImpl();
 		ArrayList<Invoice> listInvoice = invoiceDAO.getListInvoice();
@@ -71,7 +71,7 @@
 				<div class="row">
 					<div class="col-md-12">
 
-						<div class="panel panel-default">
+						<%-- <div class="panel panel-default">
 							<div class="panel-heading">Hóa Đơn Chi Tiết</div>
 							<div class="panel-body">
 								<div class="table-responsive">
@@ -119,8 +119,8 @@
 												<% } %>
 												</td>
 												<td class="center" style="text-align: center;">
-												<a href="/SOF301_Assignment/Admin/invoiceDetail_edit.jsp?action=Update&ID_InvoiceDetail=<%=invoiceDetail.getID_InvoiceDetail()%>&Quantity=<%=invoiceDetail.getQuantity()%>" class="btn btn-danger btn-xs">Sửa</a> 
-												<a href="/SOF301_Assignment/InvoiceDetailServlet_Update_Del?action=Delete&ID_InvoiceDetail=<%=invoiceDetail.getID_InvoiceDetail() %>" onclick="return confirm('Bạn chắc chắn chứ ?')" class="btn btn-warning btn-xs">Xóa</a>
+												<a href="/Website-ban-dien-thoai/Admin/invoiceDetail_edit.jsp?action=Update&ID_InvoiceDetail=<%=invoiceDetail.getID_InvoiceDetail()%>&Quantity=<%=invoiceDetail.getQuantity()%>" class="btn btn-danger btn-xs">Sửa</a> 
+												<a href="/Website-ban-dien-thoai/InvoiceDetailServlet_Update_Del?action=Delete&ID_InvoiceDetail=<%=invoiceDetail.getID_InvoiceDetail() %>" onclick="return confirm('Bạn chắc chắn chứ ?')" class="btn btn-warning btn-xs">Xóa</a>
 												</td>
 											</tr>
 										</tbody>
@@ -130,7 +130,7 @@
 									</table>
 								</div>
 							</div>
-						</div>
+						</div> --%>
 
 						<div class="panel panel-default">
 							<div class="panel-heading">Quản Lý Hóa Đơn</div>
@@ -177,9 +177,11 @@
 												%>
 												</td>
 												<td class="center" style="text-align: center;">
-												<a href="/SOF301_Assignment/Admin/invoice_edit.jsp?action=Update&ID_Invoice=<%=invoice.getID_Invoice()%>&Shipping_Address=<%=invoice.getShipping_Address() %>"
+												<a href="/Website-ban-dien-thoai/Admin/invoice_detail.jsp?ID_Invoice=<%=invoice.getID_Invoice()%>"
+													class="btn btn-primary btn-xs">Chi Tiết</a> 
+												<a href="/Website-ban-dien-thoai/Admin/invoice_edit.jsp?action=Update&ID_Invoice=<%=invoice.getID_Invoice()%>&Shipping_Address=<%=invoice.getShipping_Address() %>"
 													class="btn btn-danger btn-xs">Sửa</a> 
-												<a href="/SOF301_Assignment/InvoiceServlet_Update_Del?action=Delete&ID_Invoice=<%=invoice.getID_Invoice() %> " onclick="return confirm('Bạn không thể xóa dòng này nếu mà bạn chưa xóa dòng tương ứng với hóa đơn chi tiết ?')"
+												<a href="/Website-ban-dien-thoai/InvoiceServlet_Update_Del?action=Delete&ID_Invoice=<%=invoice.getID_Invoice() %> " onclick="return confirm('Bạn không thể xóa dòng này nếu mà bạn chưa xóa dòng tương ứng với hóa đơn chi tiết ?')"
 													class="btn btn-warning btn-xs">Xóa</a></td>
 											</tr>
 										</tbody>
@@ -192,6 +194,7 @@
 
 							</div>
 						</div>
+					
 					</div>
 				</div>
 			</div>

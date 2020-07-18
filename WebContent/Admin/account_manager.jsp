@@ -10,17 +10,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quản Lý Tài Khoản | Admin HTT-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css"
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css"
 	rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css"
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css"
 	rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
 <link
-	href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css"
+	href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css"
 	rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css"
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css"
 	rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
@@ -30,7 +30,7 @@
 
 	<%
 	if (session.getAttribute("usernamex") == null) {
-		response.sendRedirect("/SOF301_Assignment/account.jsp");
+		response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
 	} 
 		AccountDAOImpl accDAO = new AccountDAOImpl();
 		ArrayList<Account> listAcc = accDAO.getAll();
@@ -51,7 +51,7 @@
 									class="icon-bar"></span> <span class="icon-bar"></span> <span
 									class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="/SOF301_Assignment/Admin/account_insert.jsp" 
+							<a class="navbar-brand" href="/Website-ban-dien-thoai/Admin/account_insert.jsp" 
 								style="color: white;">Thêm Tài Khoản</a>
 						</div>
 					</div>
@@ -72,7 +72,7 @@
 											<tr>
 												<th>Mã Tài Khoản</th>
 												<th>Tài Khoản</th>
-												<th>Mật Khẩu</th>
+												<!-- <th>Mật Khẩu</th> -->
 												<th>Email</th>
 												<th>Họ Và Tên</th>
 												<th>Địa Chỉ</th>
@@ -90,7 +90,7 @@
 											<tr class="odd gradeX">
 												<td><%=acc.getID_Account()%></td>
 												<td><%=acc.getUsername()%></td>
-												<td><%=acc.getPassword()%></td>
+												<%-- <td><%=acc.getPassword()%></td> --%>
 												<td><%=acc.getEmail()%></td>
 												<td><%=acc.getFull_Name()%></td>
 												<td><%=acc.getAddress()%></td>
@@ -128,9 +128,9 @@
 												%>
 												</td>
 												<td class="center" style="text-align: center;">
-													<a href="/SOF301_Assignment/Admin/account_edit.jsp?action=Update&ID_Account=<%=acc.getID_Account()%>&Username=<%=acc.getUsername()%>&Email=<%=acc.getEmail() %>&Fullname=<%=acc.getFull_Name() %>&Address=<%=acc.getAddress() %>&Phone=<%=acc.getSDT() %>"
+													<a href="/Website-ban-dien-thoai/Admin/account_edit.jsp?action=Update&ID_Account=<%=acc.getID_Account()%>&Username=<%=acc.getUsername()%>&Email=<%=acc.getEmail() %>&Fullname=<%=acc.getFull_Name() %>&Address=<%=acc.getAddress() %>&Phone=<%=acc.getSDT() %>&Access=<%=acc.getAccess() %>&Status=<%=acc.getStatus() %> "
 													class="btn btn-info btn-xs">Sửa</a> 
-													<a href="/SOF301_Assignment/AccountServlet_Add_Del?action=Delete&ID_Account=<%=acc.getID_Account()%>" onclick="return confirm('Bạn chắc chắn chứ ?')"
+													<a href="/Website-ban-dien-thoai/AccountServlet_Add_Del?action=Delete&ID_Account=<%=acc.getID_Account()%>" onclick="return confirm('Bạn chắc chắn chứ ?')"
 													 class="btn btn-warning btn-xs">Xóa</a></td>
 											</tr>
 											<%

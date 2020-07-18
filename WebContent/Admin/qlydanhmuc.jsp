@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="uit.model.Category"%>
+<%@page import="uit.dao.CategoryDAOImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,18 +10,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quản Lý Danh Mục | Admin HTT-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css" rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css" rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
 </head>
 <body>
+	<%
+	if (session.getAttribute("usernamex") == null) {
+		response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
+	} 
+		/* AccountDAOImpl accDAO = new AccountDAOImpl();
+		ArrayList<Account> listAcc = accDAO.getAll(); */
+		CategoryDAOImpl categoryDAO = new CategoryDAOImpl();
+		ArrayList<Category> listCate = categoryDAO.getAll();
+	%>
 	<div id="wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 		<jsp:include page="menu.jsp"></jsp:include>
@@ -34,7 +46,7 @@
 									class="icon-bar"></span> <span class="icon-bar"></span> <span
 									class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="zdanhmuc.jsp" style="color: white;">Thêm
+							<a class="navbar-brand" href="category_insert.jsp" style="color: white;">Thêm
 								Danh Mục</a>
 						</div>
 					</div>
@@ -53,19 +65,22 @@
 											<tr style="text-align: center;">
 												<th>Mã Danh Mục</th>
 												<th>Tên Danh Mục</th>
-												<th>Danh Mục Cha</th>
+												<!-- <th>Danh Mục Cha</th> -->
 												<th>Chức Năng</th>
 											</tr>
 										</thead>
 										<tbody>
+											<% for (Category category : listCate) { %>
 											<tr class="odd gradeX">
-												<td>IP</td>
-												<td>IPhone</td>
-												<td>IP</td>
-												<td class="center"><a href="zdanhmuc.jsp"
-													class="btn btn-danger btn-xs">Sửa</a> <a href="#"
-													class="btn btn-warning btn-xs">Xóa</a></td>
+												<td><%=category.getID_Category() %></td>
+												<td><%=category.getName_Category() %></td>
+												<%-- <td><%=category.getParent_Category() %></td> --%>
+												<td class="center"><a href="zdanhmuc.jsp?action=Update&ID_Category=<%=category.getID_Category()%>&Name_Category=<%=category.getName_Category() %>&Status=1"
+													class="btn btn-danger btn-xs">Sửa</a> 
+													<!-- <a href="#"
+													class="btn btn-warning btn-xs">Xóa</a></td> -->
 											</tr>
+											<% } %>
 										</tbody>
 									</table>
 								</div>

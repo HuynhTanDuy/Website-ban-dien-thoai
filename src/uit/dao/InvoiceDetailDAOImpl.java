@@ -59,6 +59,34 @@ public class InvoiceDetailDAOImpl implements InvoiceDetailDAO {
 
 		return list;
 	}
+	
+	
+	public ArrayList<InvoiceDetail> getListInvoiceDetailById(String Id) {
+		Connection ketNoi = DBConnection.getConnection();
+		String sql = "SELECT * FROM InvoiceDetail WHERE ID_Invoice='"+Id+"'";
+		ArrayList<InvoiceDetail> list = new ArrayList<>();
+		try {
+			PreparedStatement ps = ketNoi.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				InvoiceDetail bill = new InvoiceDetail();
+				Invoice invoice = new Invoice(rs.getString("ID_Invoice"), null, "", "", null, 0);
+				Product product = new Product(rs.getString("ID_Product"), null, "", "", 0, "", 0, 0);
+				bill.setID_InvoiceDetail(rs.getInt("ID_InvoiceDetail"));
+				bill.setHoa_Don(invoice);
+				bill.setSan_Pham(product);
+				bill.setQuantity(rs.getInt("Quantity"));
+				bill.setPrice(rs.getInt("Price"));
+				bill.setSale(rs.getInt("Sale"));
+				list.add(bill);
+			}
+			ketNoi.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return list;
+	}
 
 	@Override
 	public void updateInvoiceDetail(InvoiceDetail hdct) {

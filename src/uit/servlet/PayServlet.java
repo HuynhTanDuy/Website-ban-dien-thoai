@@ -100,11 +100,11 @@ public class PayServlet extends HttpServlet {
 					hdctDAO.insertInvoiceDetail(
 							new InvoiceDetail(mhdct, hd, pr, ds.getValue(), ds.getKey().getPrice(), ds.getKey().getSale()));
 
-					SendMail.sendMail(Email, "Xin Chào, Khách hàng: " + accDAO.getAccount(Account).getID_Account(),
-							"Cam on ban da mua hang tai HTT Mobile" + "\nMa San Pham: " + pr.getID_Product()
-									+ "\nSo Luong: " + ds.getValue() + "\nTong Tien: " + uit + " VND"
-									+ "\nDia Chi Giao Hang: " + Shipping_Address + "\nPhuong Thuc Thanh Toan: "
-									+ Payment_Methods);
+//					SendMail.sendMail(Email, "Xin Chào, sKhách hàng: " + accDAO.getAccount(Account).getID_Account(),
+//							"Cam on ban da mua hang tai HTT Mobile" + "\nMa San Pham: " + pr.getID_Product()
+//									+ "\nSo Luong: " + ds.getValue() + "\nTong Tien: " + uit + " VND"
+//									+ "\nDia Chi Giao Hang: " + Shipping_Address + "\nPhuong Thuc Thanh Toan: "
+//									+ Payment_Methods);
 				}
 
 				request.setAttribute("message", "Thanh toán thành công !");

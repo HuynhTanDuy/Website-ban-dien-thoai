@@ -75,7 +75,7 @@ public class LoginServlet extends HttpServlet {
 		if (request.getParameter("enter").equals("logout")) {
 			HttpSession session = request.getSession();
 			session.invalidate();
-			response.sendRedirect("/SOF301_Assignment/account.jsp");
+			response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
 
 		}
 	}

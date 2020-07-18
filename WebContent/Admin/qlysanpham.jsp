@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="uit.model.Product"%>
+<%@page import="uit.dao.ProductDAOImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,18 +10,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quản Lý Sản Phẩm | Admin HTT-Mobile</title>
 <!-- BOOTSTRAP STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/font-awesome.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/font-awesome.css" rel="stylesheet" />
 <!-- MORRIS CHART STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="/SOF301_Assignment/Admin/assets/css/custom.css" rel="stylesheet" />
+<link href="/Website-ban-dien-thoai/Admin/assets/css/custom.css" rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
 </head>
 <body>
+	<%
+	if (session.getAttribute("usernamex") == null) {
+		response.sendRedirect("/Website-ban-dien-thoai/account.jsp");
+	} 
+		ProductDAOImpl productDAO = new ProductDAOImpl();
+		ArrayList<Product> listProduct = productDAO.getList();
+	%>
 	<div id="wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 		<jsp:include page="menu.jsp"></jsp:include>
@@ -34,7 +44,7 @@
 									class="icon-bar"></span> <span class="icon-bar"></span> <span
 									class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="zsanpham.jsp" style="color: white;">Thêm Sản Phẩm</a>
+							<a class="navbar-brand" href="add_product.jsp" style="color: white;">Thêm Sản Phẩm</a>
 						</div>
 					</div>
 				</div>
@@ -52,32 +62,34 @@
 										id="dataTables-example">
 										<thead>
 											<tr>
-												<th>Mã Sản Phẩm</th>
+												<!-- <th>Mã Sản Phẩm</th> -->
 												<th>Mã Danh Mục</th>
 												<th>Tên Sản Phẩm</th>
 												<th>Hình Ảnh</th>
 												<th>Số Lượng</th>
 												<th>Mô Tả</th>
 												<th>Giá Bán</th>
-												<th>Giảm Giá</th>
+												<!-- <th>Giảm Giá</th> -->
 												<th></th>
 											</tr>
 										</thead>
 										<tbody>
+											<% for (Product product : listProduct) { %>
 											<tr class="odd gradeX">
-												<td>5001</td>
-												<td>IP5</td>
-												<td>IPhone 5</td>
-												<td>images/sanpham/ip_se_1.jpg</td>
-												<td>20</td>
-												<td>NULL</td>
-												<td>2990000</td>
-												<td>0</td>
-												<td class="center"><a href="zsanpham.jsp"
-													class="btn btn-danger btn-xs">Sửa</a> <a href="#"
-													class="btn btn-warning btn-xs">Xóa</a></td>
+												<%-- <td><%=product.getID_Product() %></td> --%>
+												<td><%=product.getDanh_Muc().getID_Category() %></td>
+												<td><%=product.getName_Product() %></td>
+												<td><img alt="" src="../<%=product.getImage() %>"> </td>
+												<td><%=product.getQuantity() %></td>
+												<td><%=product.getDescribe() %></td>
+												<td><%=product.getPrice() %></td>
+												<!-- <td>0</td> -->
+												<td class="center"><a href="zsanpham.jsp?action=Update&ID_Product=<%=product.getID_Product()%>"
+													class="btn btn-danger btn-xs">Sửa</a> 
+													<a href="/Website-ban-dien-thoai/ProductUpdate?action=Delete&ID_Product=<%=product.getID_Product()%>" onclick="return confirm('Bạn chắc chắn chứ ?')"
+													 class="btn btn-warning btn-xs">Xóa</a></td>
 											</tr>
-										
+											<% } %>
 										</tbody>
 									</table>
 								</div>
