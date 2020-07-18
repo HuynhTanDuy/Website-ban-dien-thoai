@@ -84,14 +84,16 @@
 												<th>Sản Phẩm</th>
 												<th>Số Lượng</th>
 												<th>Giá Sản Phẩm</th>
-												<th>Giảm Giá</th>
+												<!-- <th>Giảm Giá</th> -->
 												<th>Tổng Tiền</th>
 												<th>Chức Năng</th>
 											</tr>
 										</thead>
 
 										<%
+											Integer sum=0;
 											for (InvoiceDetail invoiceDetail : listInvoiceDetail) {
+												sum += (invoiceDetail.getQuantity()*invoiceDetail.getPrice());
 										%>
 										<tbody>
 											<tr class="odd gradeX">
@@ -100,8 +102,15 @@
 												<td><%=productDAO.getProduct(invoiceDetail.getSan_Pham().getID_Product()).getName_Product()%></td>
 												<td><%=invoiceDetail.getQuantity()%></td>
 												<td><%=nf.format(invoiceDetail.getPrice())%> VNĐ</td>
-												<td><%=invoiceDetail.getSale()%> %</td>
+												<%-- <td><%=invoiceDetail.getSale()%> %</td> --%>
 												<td>
+												<% if(invoiceDetail.getSale()==0) {%>
+													<%=nf.format(invoiceDetail.getQuantity()*invoiceDetail.getPrice())%> VNĐ
+												<% } %>
+												</td>
+												
+												
+												<%-- <td>
 												<% if(invoiceDetail.getSale()==0) {%>
 													<%=nf.format(invoiceDetail.getQuantity()*invoiceDetail.getPrice())%> VNĐ
 												<% } %>
@@ -117,17 +126,20 @@
 												<% if(invoiceDetail.getSale()==10) {%>
 													<%=nf.format((invoiceDetail.getQuantity()*invoiceDetail.getPrice())*(0.90)) %> VNĐ
 												<% } %>
-												</td>
+												</td> --%>
 												<td class="center" style="text-align: center;">
 												<a href="/Website-ban-dien-thoai/Admin/invoiceDetail_edit.jsp?action=Update&ID_InvoiceDetail=<%=invoiceDetail.getID_InvoiceDetail()%>&Quantity=<%=invoiceDetail.getQuantity()%>" class="btn btn-danger btn-xs">Sửa</a> 
 												<a href="/Website-ban-dien-thoai/InvoiceDetailServlet_Update_Del?action=Delete&ID_InvoiceDetail=<%=invoiceDetail.getID_InvoiceDetail() %>" onclick="return confirm('Bạn chắc chắn chứ ?')" class="btn btn-warning btn-xs">Xóa</a>
 												</td>
 											</tr>
+											
 										</tbody>
 										<%
 											}
 										%>
+										<h2>Tổng tiền: <%=nf.format(sum) %> VNĐ</h2>	
 									</table>
+									
 								</div>
 							</div>
 						</div>

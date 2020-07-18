@@ -181,7 +181,7 @@
 													class="btn btn-primary btn-xs">Chi Tiết</a> 
 												<a href="/Website-ban-dien-thoai/Admin/invoice_edit.jsp?action=Update&ID_Invoice=<%=invoice.getID_Invoice()%>&Shipping_Address=<%=invoice.getShipping_Address() %>"
 													class="btn btn-danger btn-xs">Sửa</a> 
-												<a href="/Website-ban-dien-thoai/InvoiceServlet_Update_Del?action=Delete&ID_Invoice=<%=invoice.getID_Invoice() %> " onclick="return confirm('Bạn không thể xóa dòng này nếu mà bạn chưa xóa dòng tương ứng với hóa đơn chi tiết ?')"
+												<a href="/Website-ban-dien-thoai/InvoiceServlet_Update_Del?action=Delete&ID_Invoice=<%=invoice.getID_Invoice() %> " onclick="return confirm('Bạn chắc chắn chứ ?')"
 													class="btn btn-warning btn-xs">Xóa</a></td>
 											</tr>
 										</tbody>

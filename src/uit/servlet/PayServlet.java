@@ -92,10 +92,12 @@ public class PayServlet extends HttpServlet {
 				hd.setID_Invoice(mhd);
 				hdDAO.insertInvoice(hd);
 				TreeMap<Product, Integer> list = cart.getList();
+				int temp=1;
 				for (Map.Entry<Product, Integer> ds : list.entrySet()) {
+					temp++;
 					Product pr = new Product();
 					pr.setID_Product(ds.getKey().getID_Product());
-					int mhdct = (int) date.getTime();
+					int mhdct = (int) date.getTime() + temp;
 					int uit = ds.getValue() * ds.getKey().getPrice();
 					hdctDAO.insertInvoiceDetail(
 							new InvoiceDetail(mhdct, hd, pr, ds.getValue(), ds.getKey().getPrice(), ds.getKey().getSale()));
@@ -108,7 +110,8 @@ public class PayServlet extends HttpServlet {
 				}
 
 				request.setAttribute("message", "Thanh toán thành công !");
-				request.getRequestDispatcher("index.jsp").forward(request, response);
+				cart.clear();
+				request.getRequestDispatcher("success.jsp").forward(request, response);
 				// response.sendRedirect("/SOF301_Assignment/checkout.jsp");
 			} else {
 				request.setAttribute("message", "Mua hàng thất bại !");

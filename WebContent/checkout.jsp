@@ -102,7 +102,9 @@
 				</thead>
 				<tbody>
 					<%
+						Integer sum=0;
 						for (Map.Entry<Product, Integer> ds : list.entrySet()) {
+							sum += (ds.getValue() * ds.getKey().getPrice());
 					%>
 					<tr>
 						<td class="cart_product"><a href=""><img
@@ -147,6 +149,7 @@
 
 				</tbody>
 			</table>
+			<h2>Tổng tiền: <%=nf.format(sum) %> VNĐ</h2>
 		</div>
 
 		<div class="shopper-informations" style="text-align: center;">

@@ -63,4 +63,8 @@ public class Cart {
 			list.remove(pr);
 		}
 	}
+	
+	public void clear() {
+		list.clear();
+	}
 }

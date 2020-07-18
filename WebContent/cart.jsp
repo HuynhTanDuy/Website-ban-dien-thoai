@@ -65,8 +65,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							<%
+							<%	
+								Integer sum=0;
 								for (Map.Entry<Product, Integer> ds : list.entrySet()) {
+									sum += (ds.getValue() * ds.getKey().getPrice());
 							%>
 							<tr>
 								<td class="cart_product"><a href=""><img
@@ -111,6 +113,7 @@
 
 						</tbody>
 					</table>
+					<h2>Tổng tiền: <%=nf.format(sum) %> VNĐ</h2>
 				</div>
 			</div>
 			</section>
@@ -125,8 +128,8 @@
 				<div class="row">				
 					<div class="col-sm-6">
 						<div class="total_area">						
-							<a class="btn btn-default update" href="index.jsp" onclick="return confirm('Bạn muốn hủy đơn hàng ?')">Hủy Đơn Hàng</a> <a
-								class="btn btn-default check_out" href="checkout.jsp">Mua Hàng</a>
+							<a class="btn btn-default update" href="index.jsp" onclick="return confirm('Bạn muốn hủy đơn hàng ?')">Hủy Đơn Hàng</a>
+							<a class="btn btn-default check_out" href="checkout.jsp">Mua Hàng</a>
 						</div>
 					</div>
 				</div>
