@@ -81,7 +81,7 @@
 												<span style="color: red;"><%=error_methods%></span>		
 												 <select class="form-control" name="Payment_Methods" >
 													<option value="<%=Payment_Methods%>">Chọn</option>
-													<option value="Thanh toan khi giao hang">Thanh
+													<option value="Thanh toan khi giao hang" selected>Thanh
 														toán khi giao hàng</option>
 													<option value="Thanh toan qua the ngan hang">Thanh
 														toán qua thẻ ngân hàng</option>
