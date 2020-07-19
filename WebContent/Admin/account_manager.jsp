@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Quản Lý Tài Khoản | Admin HTT-Mobile</title>
+<title>Quản Lý Tài Khoản | Admin Mobile-Store</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="/Website-ban-dien-thoai/Admin/assets/css/bootstrap.css"
 	rel="stylesheet" />

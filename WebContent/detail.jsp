@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Chi Tiết Sản Phẩm | HTT-Mobile</title>
+<title>Chi Tiết Sản Phẩm | Mobile-Store</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -114,7 +114,7 @@
 								VNĐ
 							</p>
 							<p>
-								<b>Bán Tại:</b> HTT-MOBILE
+								<b>Bán Tại:</b> Mobile-Store
 							</p>
 							<div class="fb-like"
 								data-href="https://facebook.com/uitFC.VN"

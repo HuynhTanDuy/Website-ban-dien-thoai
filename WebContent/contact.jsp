@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Liên Hệ | HTT-Mobile</title>
+<title>Liên Hệ | Mobile-Store</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 					<div class="contact-info">
 						<h2 class="title text-center">THÔNG TIN LIÊN LẠC</h2>
 						<address>
-							<p>HTT-MOBILE</p>
+							<p>Mobile-Store</p>
 							<p>Ngách 58/23 Trần Bình, Mai Dịch, Cầu Giấy</p>
 							<p>Hà Nội (100000), Việt Nam</p>
 							<p>Mobile: +84 121 332 1897</p>

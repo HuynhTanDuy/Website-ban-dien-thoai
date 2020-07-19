@@ -118,6 +118,7 @@ public class ProductUpdate extends HttpServlet {
 		}
 //		RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
 //		rd.forward(request, response);
+		
 		response.sendRedirect(request.getContextPath() + url);
 	}
 

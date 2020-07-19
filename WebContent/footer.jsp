@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Home | HTT-Mobile</title>
+<title>Home | Mobile-Store</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -145,7 +145,7 @@
 				</div>
 				<div class="col-sm-3 col-sm-offset-1">
 					<div class="single-widget">
-						<h2>GIỚI THIỆU VỀ MOBILE-STORE</h2>
+						<h2>GIỚI THIỆU VỀ Mobile-StoreORE</h2>
 						<form action="#" class="searchform">
 							<input type="text" placeholder="Địa chỉ email của bạn" />
 							<button type="submit" class="btn btn-default">
