@@ -216,4 +216,31 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 		
 	}
+	
+	public ArrayList<Product> getListRecommendProduct() {
+		Connection ketNoi = DBConnection.getConnection();
+		String sql = "SELECT * FROM Product ORDER BY RAND() LIMIT 4;";
+		ArrayList<Product> arr = new ArrayList<>();
+		try {
+			PreparedStatement ps = ketNoi.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Product sanPham = new Product();
+				sanPham.setID_Product(rs.getString("ID_Product"));
+				Category danhMuc = new Category(rs.getString("ID_Category"), "", "");
+				sanPham.setDanh_Muc(danhMuc);
+				sanPham.setName_Product(rs.getString("Name_Product"));
+				sanPham.setImage(rs.getString("Image"));
+				sanPham.setQuantity(rs.getInt("Quantity"));
+				sanPham.setDescribe(rs.getString("Describe"));
+				sanPham.setPrice(rs.getInt("Price"));
+				sanPham.setSale(rs.getInt("Sale"));
+				arr.add(sanPham);
+			}
+			ketNoi.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return arr;
+	}
 }

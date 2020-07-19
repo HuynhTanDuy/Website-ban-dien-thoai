@@ -2,6 +2,7 @@
 <%@page import="java.text.NumberFormat"%>
 <%@page import="uit.model.Product"%>
 <%@page import="uit.dao.ProductDAOImpl"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -59,6 +60,7 @@
 		Product sp = sanPhamDAO.getDetailProduct(request.getParameter("ID_Product"));
 		NumberFormat nf = NumberFormat.getInstance();
 		nf.setMinimumIntegerDigits(0);
+		ArrayList<Product> recommendList = sanPhamDAO.getListRecommendProduct();
 	%>
 	<jsp:include page="header.jsp"></jsp:include>
 	<section>
@@ -131,28 +133,30 @@
 					<!--category-tab-->
 					<div class="col-sm-12">
 						<ul class="nav nav-tabs">
-							<li><a href="#details" data-toggle="tab">Sản Phẩm Khác</a></li>
-							<li class="active"><a href="#reviews" data-toggle="tab">Đánh
-									Giá (5)</a></li>
+							<li class="active"><a href="#details" data-toggle="tab" >Sản Phẩm Khác</a></li>
+							<!-- <li class="active"><a href="#reviews" data-toggle="tab">Đánh
+									Giá (5)</a></li> -->
 						</ul>
 					</div>
 					<div class="tab-content">
-						<div class="tab-pane fade" id="details">
+						<div class="tab-pane fade active in" id="details">
+							<% for (Product pr : recommendList) { %> 
 							<div class="col-sm-3">
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/ip_x_1.jpg" alt="" />
-											<h2>30.990.000 VNĐ</h2>
-											<p>IPhone X 128GB</p>
-											<a href="#" class="btn btn-default add-to-cart"><i
+											<img src="<%=pr.getImage() %>" alt="" />
+											<h2><%=nf.format(pr.getPrice()) %> VNĐ</h2>
+											<p><%=pr.getName_Product() %></p>
+											<a href="CartServlet?enter=insert&ID_Product=<%=pr.getID_Product()%>&cartID=<%=System.currentTimeMillis()%>" class="btn btn-default add-to-cart"><i
 												class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
 										</div>
 
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<% } %>
+							<!-- <div class="col-sm-3">
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
@@ -193,16 +197,16 @@
 
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 
 
-						<div class="tab-pane fade active in" id="reviews">
+						<div class="tab-pane fade " id="reviews">
 							<div class="col-sm-12">
 
-								<div class="fb-comments"
+								<%-- <div class="fb-comments"
 									data-href="detail.jsp?msp<%=sp.getID_Product()%>"
-									data-width="800px" data-numposts="5"></div>
+									data-width="800px" data-numposts="5"></div> --%>
 								<!-- <ul>
 									<li><a href=""><i class="fa fa-user"></i>uitFC</a></li>
 									<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
