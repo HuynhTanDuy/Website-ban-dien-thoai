@@ -71,7 +71,7 @@
 					<div class="col-sm-5">
 						<div class="view-product">
 							<img src="<%=sp.getImage()%>" alt="" />
-							<h3>Phóng To</h3>
+							<!-- <h3>Phóng To</h3> -->
 						</div>
 
 					</div>
@@ -89,8 +89,9 @@
 							</p>
 
 							<img src="images/product-details/rating.png" alt="" /> </br> <span>
-								<span><%=nf.format(sp.getPrice())%> VNĐ</span> <label>Số
-									Lượng:</label> <input type="text" value="Nhập" />
+								<span><%=nf.format(sp.getPrice())%> VNĐ</span> 
+								<!-- <label>Số Lượng:</label> -->
+									 <!-- <input type="text" value="Nhập" /> -->
 
 							</span>
 
@@ -109,17 +110,17 @@
 								<%=sp.getQuantity()%>
 								sản phẩm
 							</p>
-							<p>
+							<%-- <p>
 								<b>Giảm giá: </b><%=sp.getSale()%>
 								VNĐ
-							</p>
+							</p> --%>
 							<p>
-								<b>Bán Tại:</b> Mobile-Store
+								<b>Mô tả: </b> <%=sp.getDescribe() %>
 							</p>
-							<div class="fb-like"
+							<!-- <div class="fb-like"
 								data-href="https://facebook.com/uitFC.VN"
 								data-layout="standard" data-action="like" data-size="small"
-								data-show-faces="true" data-share="true"></div>
+								data-show-faces="true" data-share="true"></div> -->
 						</div>
 						<!--/product-information-->
 					</div>

@@ -38,7 +38,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public ArrayList<Category> getListSubCategory(String ID_Category) {
 		Connection ketNoi = DBConnection.getConnection();
-		String sql = "SELECT * FROM Category WHERE Parent_Category='" + ID_Category + "'";
+		String sql = "SELECT * FROM Category ";
 		ArrayList<Category> arr = new ArrayList<>();
 		try {
 			PreparedStatement ps = ketNoi.prepareStatement(sql);

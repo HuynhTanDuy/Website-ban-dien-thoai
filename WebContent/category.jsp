@@ -35,14 +35,14 @@
 			<h2>DANH MỤC</h2>
 			<div class="panel-group category-products" id="accordian">
 
-				<%
+				<%-- <%
 					for (Category Parent_Category : danhMucDAO.getListParentCategory()) {
-				%>
+				%> --%>
 				<div class="panel panel-default">
 					<div class="panel-heading">
 
 						<%
-							for (Category danh_muc_con : danhMucDAO.getListSubCategory(Parent_Category.getID_Category())) {
+							for (Category danh_muc_con : danhMucDAO.getListSubCategory("IP")) {
 						%>
 
 						<%-- <%=Parent_Category.getName_Category()%> --%>
@@ -60,9 +60,9 @@
 					</div>
 				</div>
 
-				<%
+			<%-- 	<%
 					}
-				%>
+				%> --%>
 
 			</div>
 
