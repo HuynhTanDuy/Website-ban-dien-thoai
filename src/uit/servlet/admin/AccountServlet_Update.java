@@ -65,35 +65,35 @@ public class AccountServlet_Update extends HttpServlet {
 		}
 		// Validate Fullname
 		if (Fullname.equals("")) {
-			fullname_error = "Vui lòng nhập H�? Tên của bạn !";
+			fullname_error = "Vui lòng nhập Họ Tên của bạn !";
 		}
 		if (fullname_error.length() > 0) {
 			request.setAttribute("fullname_error", fullname_error);
 		}
 		// Validate �?ịa Chỉ
 		if (Address.equals("")) {
-			address_error = "Vui lòng nhập �?ịa Chỉ của bạn !";
+			address_error = "Vui lòng nhập Địa Chỉ của bạn !";
 		}
 		if (address_error.length() > 0) {
 			request.setAttribute("address_error", address_error);
 		}
 		// Validate SDT
 		if (Phone.equals("")) {
-			phone_error = "Vui lòng nhập Số �?iện Thoại của bạn !";
+			phone_error = "Vui lòng nhập Số Điện Thoại của bạn !";
 		}
 		if (phone_error.length() > 0) {
 			request.setAttribute("phone_error", phone_error);
 		}
 		// Validate Quy�?n Truy Cập
 		if (Access == 0) {
-			access_error = "Vui lòng ch�?n Quy�?n Truy Cập của bạn !";
+			access_error = "Vui lòng chọn Quyền Truy Cập của bạn !";
 		}
 		if (Access == 1 || Access == 2) {
 			request.setAttribute("access_error", access_error);
 		}
 		// Validate Trạng Thái
 		if (Status == 0) {
-			status_error = "Vui lòng ch�?n Trạng Thái của bạn !";
+			status_error = "Vui lòng chọn Trạng Thái của bạn !";
 		}
 		if (Status == 1 || Status == 2) {
 			request.setAttribute("status_error", status_error);

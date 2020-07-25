@@ -19,7 +19,7 @@ import uit.model.Cart;
 import uit.model.Invoice;
 import uit.model.InvoiceDetail;
 import uit.model.Product;
-import uit.other.SendMail;
+import uit.util.SendMail;
 
 public class PayServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

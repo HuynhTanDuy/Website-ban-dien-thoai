@@ -1,4 +1,4 @@
-package uit.other;
+package uit.util;
 
 import java.util.Properties;
 import javax.mail.Message;

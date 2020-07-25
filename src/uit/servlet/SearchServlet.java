@@ -20,7 +20,7 @@ import uit.model.Cart;
 import uit.model.Invoice;
 import uit.model.InvoiceDetail;
 import uit.model.Product;
-import uit.other.SendMail;
+import uit.util.SendMail;
 
 @WebServlet("/SearchServlet")
 public class SearchServlet extends HttpServlet {

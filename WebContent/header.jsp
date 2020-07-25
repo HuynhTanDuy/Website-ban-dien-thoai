@@ -42,7 +42,7 @@
 				<div class="col-sm-6">
 					<div class="social-icons pull-right">
 						<ul class="nav navbar-nav">
-							<li><a target="_blank" href="http://facebook.com/"><i
+							<li><a target="_blank" href="#"><i
 									class="fa fa-facebook"></i></a></li>
 							<li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
 							<li><a target="_blank" href="#"><i

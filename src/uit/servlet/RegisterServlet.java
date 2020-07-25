@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import uit.dao.AccountDAOImpl;
 import uit.model.Account;
-import uit.other.SendMail;
+import uit.util.SendMail;
 
 public class RegisterServlet extends HttpServlet {
 	private AccountDAOImpl taiKhoanDAO = new AccountDAOImpl();

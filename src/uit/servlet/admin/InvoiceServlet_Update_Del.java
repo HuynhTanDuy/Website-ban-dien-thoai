@@ -63,14 +63,14 @@ public class InvoiceServlet_Update_Del extends HttpServlet {
 		}
 		// Validate phuong thuc thanh toan
 		if (Payment_Methods.equals("")) {
-			error_methods = "Vui lòng ch�?n phương thức thanh toán !";
+			error_methods = "Vui lòng chọn phương thức thanh toán !";
 		}
 		if (error_methods.length() > 0) {
 			request.setAttribute("error_methods", error_methods);
 		}
 		// Validate trang thai
 		if (Status_Order == 0) {
-			error_status = "Vui lòng ch�?n trạng thái đơn hàng !";
+			error_status = "Vui lòng chọn trạng thái đơn hàng !";
 		}
 		if (Status_Order == 1 || Status_Order == 2) {
 			request.setAttribute("error_status", error_status);
