@@ -33,8 +33,7 @@
 				<div class="col-sm-6">
 					<div class="contactinfo">
 						<ul class="nav nav-pills">
-							<li><a href="#"><i class="fa fa-phone"></i> +84 121 332
-									1897</a></li>
+							<li><a href="#"><i class="fa fa-phone"></i> +84 123 465 789</a></li>
 							<li><a href="#"><i class="fa fa-envelope"></i>
 									uitfc@gmail.com</a></li>
 						</ul>
@@ -43,7 +42,7 @@
 				<div class="col-sm-6">
 					<div class="social-icons pull-right">
 						<ul class="nav navbar-nav">
-							<li><a target="_blank" href="http://facebook.com/uitFC"><i
+							<li><a target="_blank" href="http://facebook.com/"><i
 									class="fa fa-facebook"></i></a></li>
 							<li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
 							<li><a target="_blank" href="#"><i
@@ -66,30 +65,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="logo pull-left">
-						<a href="index.jsp"><img src="images/home/logo_htt.png" alt="" /></a>
-					</div>
-					<div class="btn-group pull-right">
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle usa"
-								data-toggle="dropdown">
-								Việt Nam <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu">
-								<li><a href="#">Việt Nam</a></li>
-								<li><a href="#">Hoa Kỳ</a></li>
-							</ul>
-						</div>
-
-						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle usa"
-								data-toggle="dropdown">
-								VNĐ <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu">
-								<li><a href="#">VNĐ</a></li>
-								<li><a href="#">USD</a></li>
-							</ul>
-						</div>
+						<a href="index.jsp"><img style="width:150px; height:100px"src="images/home/logo_htt.png" alt="" /></a>
 					</div>
 				</div>
 				<div class="col-sm-8">

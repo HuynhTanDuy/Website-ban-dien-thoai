@@ -152,9 +152,11 @@
 			<h2>Tổng tiền: <%=nf.format(sum) %> VNĐ</h2>
 		</div>
 
-		<div class="shopper-informations" style="text-align: center;">
+		<div class="shopper-informations" style="text-align: center; display: flex;
+    justify-content: center;">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-6" style="
+    width: 100%;">
 					<div class="shopper-info">
 						<form action="PayServlet" method="post">
 						

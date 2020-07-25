@@ -24,7 +24,7 @@
 		<div class="content-404">
 			<img src="images/404/404.png" class="img-responsive" alt="" />
 			<h1>
-				<b>Ô Mai Gót!</b> Chúng Tôi Không Thể Tìm Thấy Trang Này
+				<b></b> Chúng Tôi Không Thể Tìm Thấy Trang Này
 			</h1>
 			<p>Haizz ... Vì vậy, có vẻ như bạn chặn một cái gì đó. Trang bạn
 				đang tìm kiếm đã có và đã bị xóa.</p>

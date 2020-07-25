@@ -25,7 +25,7 @@
 				<div class="col-sm-2">
 					<div class="companyinfo">
 						<h2>
-							<span>HTT</span>-MOBILE
+							<span>MOBILE</span>-MEDIC
 						</h2>
 						<p>Là cửa hàng uy tín nhất tại Hồ Chí Minh. Chuyên cung cấp hàng chất
 							lượng cao nhất VN</p>

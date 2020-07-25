@@ -22,7 +22,7 @@
 		<div id="page-inner">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Trang Chủ Admin Q-Mobile</h2>
+					<h2>Trang Chủ Admin</h2>
 				</div>
 			</div>
 			<!-- /. ROW  -->

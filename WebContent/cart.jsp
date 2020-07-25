@@ -88,13 +88,15 @@
 								</td>
 								<td class="cart_quantity">
 									<div class="cart_quantity_button">
-										<a class="cart_quantity_up"
-											href="CartServlet?enter=tang&ID_Product=<%=ds.getKey().getID_Product()%>&cartID=<%=System.currentTimeMillis()%>">
-											+ </a> <input class="cart_quantity_input" type="text"
-											value="<%=ds.getValue()%>" autocomplete="off" size="2"
-											disabled=""> <a class="cart_quantity_down"
+									 <a class="cart_quantity_down"
 											href="CartServlet?enter=giam&ID_Product=<%=ds.getKey().getID_Product()%>&cartID=<%=System.currentTimeMillis()%>">
 											- </a>
+										 <input class="cart_quantity_input" type="text"
+											value="<%=ds.getValue()%>" autocomplete="off" size="2"
+											disabled="">
+											<a class="cart_quantity_up"
+											href="CartServlet?enter=tang&ID_Product=<%=ds.getKey().getID_Product()%>&cartID=<%=System.currentTimeMillis()%>">
+											+ </a>
 									</div>
 								</td>
 								<td class="cart_total">

@@ -45,11 +45,11 @@
 							</div>
 							<div class="form-group col-md-12">
 								<input type="text" name="subject" class="form-control" required
-									placeholder="Subject">
+									placeholder="Tiêu đề">
 							</div>
 							<div class="form-group col-md-12">
 								<textarea name="message" id="message" required
-									class="form-control" rows="8" placeholder="Tin Nhắn Của Bạn Viết Ở Đây"></textarea>
+									class="form-control" rows="8" placeholder="Nội dung"></textarea>
 							</div>
 							<div class="form-group col-md-12">
 								<input type="submit" name="submit"
@@ -63,19 +63,19 @@
 						<h2 class="title text-center">THÔNG TIN LIÊN LẠC</h2>
 						<address>
 							<p>Mobile-Store</p>
-							<p>Ngách 58/23 Trần Bình, Mai Dịch, Cầu Giấy</p>
-							<p>Hà Nội (100000), Việt Nam</p>
-							<p>Mobile: +84 121 332 1897</p>
-							<p>Fax: +84 1215 787 287</p>
+							<p>Chung cư Green Field</p>
+							<p>TP HCM, Việt Nam</p>
+							<p>Mobile: +84 123 465 789</p>
+							<p>Fax: +84 465 234 79</p>
 							<p>Email: uitfc@gmail.com</p>
 						</address>
 						<div class="social-networks">
 							<h2 class="title text-center">MẠNG XÃ HỘI</h2>
 							<ul>
-								<li><a target="_blank" href="http://facebook.com/uitFC"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a target="_blank" href="https://www.youtube.com/channel/UCBEXqRE1__XX7NhtF5YqHPQ?sub_confirmation=1"><i class="fa fa-youtube"></i></a></li>
+								<li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
