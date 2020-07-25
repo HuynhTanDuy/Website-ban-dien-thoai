@@ -14,7 +14,7 @@ public class DBConnection {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/shop_manage";
 			
-			con = DriverManager.getConnection(url, "root", "");
+			con = DriverManager.getConnection(url, "root", "Secret12345@");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
