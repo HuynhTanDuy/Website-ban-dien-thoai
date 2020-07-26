@@ -70,7 +70,7 @@
 										id="dataTables-example">
 										<thead>
 											<tr>
-												<th>Mã Tài Khoản</th>
+												<!-- <th>Mã Tài Khoản</th> -->
 												<th>Tài Khoản</th>
 												<!-- <th>Mật Khẩu</th> -->
 												<th>Email</th>
@@ -88,7 +88,7 @@
 												for (Account acc : listAcc) {
 											%>
 											<tr class="odd gradeX">
-												<td><%=acc.getID_Account()%></td>
+												<%-- <td><%=acc.getID_Account()%></td> --%>
 												<td><%=acc.getUsername()%></td>
 												<%-- <td><%=acc.getPassword()%></td> --%>
 												<td><%=acc.getEmail()%></td>

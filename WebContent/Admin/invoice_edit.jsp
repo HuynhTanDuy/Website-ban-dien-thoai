@@ -96,7 +96,7 @@
 												<select
 													class="form-control" name="Status_Order">
 													<option value="1">Đã Thanh Toán</option>
-													<option value="2">Đang Xử Lý</option>
+													<option value="2" selected>Đang Xử Lý</option>
 												</select>
 											</div>
 											<input type="hidden" name="action" value="Update"> 

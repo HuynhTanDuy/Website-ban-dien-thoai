@@ -65,7 +65,7 @@ public class PayServlet extends HttpServlet {
 		}
 		// Validate phuong thuc thanh toan
 		if (Payment_Methods.equals("")) {
-			error_methods = "Vui lòng ch�?n phương thức thanh toán";
+			error_methods = "Vui lòng chọn phương thức thanh toán";
 		}
 		if (error_methods.length() > 0) {
 			request.setAttribute("error_methods", error_methods);
@@ -112,7 +112,7 @@ public class PayServlet extends HttpServlet {
 				request.setAttribute("message", "Thanh toán thành công !");
 				cart.clear();
 				request.getRequestDispatcher("success.jsp").forward(request, response);
-				// response.sendRedirect("/SOF301_Assignment/checkout.jsp");
+				
 			} else {
 				request.setAttribute("message", "Mua hàng thất bại !");
 				request.getRequestDispatcher("checkout.jsp").forward(request, response);

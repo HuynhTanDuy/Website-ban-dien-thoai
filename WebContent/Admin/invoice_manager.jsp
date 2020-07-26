@@ -140,9 +140,10 @@
 										id="dataTables-example">
 										<thead>
 											<tr style="text-align: center;">
-												<th>Mã Hóa Đơn</th>
+												<!-- <th>Mã Hóa Đơn</th> -->
 												<th>Khách Hàng</th>
 												<th>Địa Chỉ Giao Hàng</th>
+												<th>Số điện thoại </th>
 												<th>Phương Thức Thanh Toán</th>
 												<th>Ngày Mua Hàng</th>
 												<th>Trạng Thái Đơn Hàng</th>
@@ -155,10 +156,12 @@
 										%>
 										<tbody>
 											<tr class="odd gradeX">
-												<td><%=invoice.getID_Invoice()%></td>
+												<%-- <td><%=invoice.getID_Invoice()%></td> --%>
 												<td><%=accDAO.getUser(invoice.getTai_Khoan().getID_Account()).getUsername()%></td>
 												<td><%=invoice.getShipping_Address()%></td>
+												<td><%=accDAO.getUser(invoice.getTai_Khoan().getID_Account()).getSDT()%> </td>
 												<td><%=invoice.getPayment_Methods()%></td>
+												
 												<td><%=invoice.getPurchase_Date()%></td>	
 												<td class="center" style="text-align: center;">
 												<%
