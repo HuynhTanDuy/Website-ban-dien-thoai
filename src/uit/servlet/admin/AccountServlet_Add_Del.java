@@ -151,6 +151,7 @@ public class AccountServlet_Add_Del extends HttpServlet {
 //					SendMail.sendMail(acc.getEmail(), "HTT Mobile",
 //							"Xin Chào, " + acc.getEmail() + "\nBan da dang ky thanh cong tai khoan cua minh."
 //									+ "\nUsername: " + acc.getUsername() + "\nPassword: " + acc.getPassword());
+//					gửi mail
 					break;
 				} else {
 					url = "/Admin/account_insert.jsp";
