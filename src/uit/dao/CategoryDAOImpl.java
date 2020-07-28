@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import uit.connection.DBConnection;
-import uit.model.Account;
 import uit.model.Category;
 
 public class CategoryDAOImpl implements CategoryDAO {
@@ -15,6 +14,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Override
 	public ArrayList<Category> getListParentCategory() {
 		Connection ketNoi = DBConnection.getConnection();
+		//lấy danh mục
 		String sql = "SELECT * FROM Category WHERE Parent_Category='null'";
 		ArrayList<Category> arr = new ArrayList<>();
 		try {
